@@ -13,5 +13,5 @@ reports:
     DotnetTestExamples:
         file-format: VisualStudioTrx
         files:
-            - 'report.xml'
+            - '**/*'
         base-directory: './testresults'
