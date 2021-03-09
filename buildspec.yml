@@ -7,11 +7,11 @@ phases:
     build:
         commands:
             - dotnet build -c Release ./dotnet-core-xunit-example-master/dotnet-core-xunit/dotnet-core-xunit.csproj
-            - dotnet test -c Release ./dotnet-core-xunit-example-master/dotnet-core-xunit-test/dotnet-core-xunit-test.csproj --collect:'XPlat Code Coverage' --logger:'trx;logFilename=report.trx;verbosity=detailed' --results-directory ./testresults 
+            - dotnet test -c Release ./dotnet-core-xunit-example-master/dotnet-core-xunit-test/dotnet-core-xunit-test.csproj --collect:'XPlat Code Coverage' --logger:'trx;logFilename=report.xml;' --results-directory ./testresults 
             #- dotnet test -c Release ./dotnet-core-xunit-example-master/dotnet-core-xunit-test/dotnet-core-xunit-test.csproj --logger trx --results-directory ./testresults
 reports:
     DotnetTestExamples:
         file-format: VisualStudioTrx
         files:
-            - 'report.trx'
+            - 'report.xml'
         base-directory: './testresults'
